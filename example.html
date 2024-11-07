@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let grade = prompt("Enter your grade (between 0 and 100:");
+        grade = Number(grade);
+        let outputMessage = '';
+        if (grade >= 0 && grade <= 100) {
+            let result = '';
+            if (grade >= 90) {
+                result = 'A';
+            } else if (grade >= 80) {
+                result = 'B';
+            } else if (grade >= 70) {
+                result = 'C';
+            } else {
+                result = 'F';
+            }
+            outputMessage = `I got this: ${result}`;
+        } else {
+            outputMessage = "Please enter a grade between 0 and 100.";
+        }
+        document.getElementById("output").innerText = outputMessage;
+    </script>
+</body>
+</html>
